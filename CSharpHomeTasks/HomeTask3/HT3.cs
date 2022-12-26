@@ -52,7 +52,7 @@ namespace CSharpHomeTask3
         [Test]
         public void Test1_ZeroNumber()
         {
-            long number = 0;
+            int number = 0;
             int expectedResult = 0;
             int result = DigitalRoot2(number);
 
@@ -61,7 +61,7 @@ namespace CSharpHomeTask3
         [Test]
         public void Test2_1To9()
         {
-            long number = 123456789;
+            int number = 123456789;
             int expectedResult = 9;
             int result = DigitalRoot2(number);
 
@@ -70,16 +70,16 @@ namespace CSharpHomeTask3
         [Test]
         public void Test3_MixedNumbers()
         {
-            long number = 18485155155;
-            int expectedResult = 3;
+            int number = 2147483647;
+            int expectedResult = 1;
             int result = DigitalRoot2(number);
 
             Assert.AreEqual(expectedResult, result);
         }
         //Second solution:
-        public int DigitalRoot2(long n)
+        public int DigitalRoot2(int n)
         {
-            long result = 0;
+            int result = 0;
             if (n < 10) return (int)n;
             while (n > 0)
             {
