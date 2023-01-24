@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApiHomeTask.Models.Rresponse
+namespace WebApiHomeTask.Models.Response
 {
     public class BookingResponse
     {
