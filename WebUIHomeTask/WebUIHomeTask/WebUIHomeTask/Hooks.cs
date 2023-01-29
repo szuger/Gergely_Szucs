@@ -23,12 +23,12 @@ namespace WebUIHomeTask
            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
            _scenarioContext["Driver"] = _driver;
        }
-        [AfterScenario]
+       /* [AfterScenario]
         public void StopDriver()
         {
             _driver.Close();
             _driver.Dispose();
            
-        }
+        }*/
    }
 }

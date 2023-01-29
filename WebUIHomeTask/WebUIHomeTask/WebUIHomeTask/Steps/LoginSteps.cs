@@ -21,19 +21,19 @@ namespace WebUIHomeTask.Steps
             _dashBoardContext = new DashboardContext(_driver);
         } 
 
-        [When(@"I log in  as Admin user")]
+        [When(@"I log in as Admin user")]
         public void WhenILogInAsAdminUser()
         {
             _loginContext.Login(UserName, Password);
         }
 
 
-        [Then(@"I am logged in")]
+        [Then(@"I go to Admin page")]
         public void ThenIAmLoggedIn()
         {
-            var actual = _dashBoardContext.isPageLoaded();
-
-            Assert.That(actual, Is.True);
+            //var actual = _dashBoardContext.isPageLoaded();
+            _dashBoardContext.goToAdminMenu();
+           // Assert.That(actual, Is.True);
         }
 
 

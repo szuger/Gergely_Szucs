@@ -23,5 +23,9 @@ namespace WebUIHomeTask.Framework.Contexts
             }.Until(d => _dashBoard.AdminMenu);  
             return adminMenu != null && adminMenu.Displayed;
         }
+        public void goToAdminMenu()
+        {
+            _dashBoard.AdminMenu.Click();
+        }
     }
 }
