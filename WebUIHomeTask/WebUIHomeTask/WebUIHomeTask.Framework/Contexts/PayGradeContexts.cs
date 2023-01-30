@@ -33,11 +33,12 @@ namespace WebUIHomeTask.Framework.Contexts
         {
           
             _payGrades.AddCurenciesButton.Click();
-           // _payGrades.selectCurrency.Click();
-           // _payGrades.AED.Click();
+            //Thread.Sleep(1000);
+            _payGrades.SelectCurrency.SendKeys("hhhhhh\n");
+            _payGrades.AED.Click();
             _payGrades.MaxSalary.SendKeys(minS);
             _payGrades.MinSalary.SendKeys(maxS);
-           // _payGrades.SaveButton2.Click();
+            _payGrades.SaveSalary.Click();
 
         }
         
