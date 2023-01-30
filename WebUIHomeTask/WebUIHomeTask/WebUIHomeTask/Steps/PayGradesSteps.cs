@@ -4,11 +4,15 @@ using WebUIHomeTask.Framework.Contexts;
 
 namespace WebUIHomeTask.Steps
 {
+
     [Binding]
     public class PayGradesSteps
     {
         private readonly IWebDriver _driver;
         private readonly PayGradeContexts _payGradesContexts;
+        private const string PayGradeName = "RandomName";
+        private const string MinimumSalary = "100";
+        private const string MaximumSalary = "200";
 
         public PayGradesSteps(ScenarioContext context)
         {
@@ -17,13 +21,17 @@ namespace WebUIHomeTask.Steps
             
         }
 
-        [Then(@"I add new pay grade with RandomName")]
-        public void ThenIAddNewPayGradeWithRandomName()
+        [Then(@"I add new pay grade")]
+        public void ThenIAddNewPayGradeWith()
         {
-            _payGradesContexts.addName(RandomName);
-
-
+            _payGradesContexts.AddName(PayGradeName);
         }
+        [Then(@"I set minimum salary, maximum salary")]
+        public void ThenISetMinimumSalaryMaximumSalary()
+        {
+            _payGradesContexts.AddCurrency(MaximumSalary, MinimumSalary);
+        }
+
 
 
     }

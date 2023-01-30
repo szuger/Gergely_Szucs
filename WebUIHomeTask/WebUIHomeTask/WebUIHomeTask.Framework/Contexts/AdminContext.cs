@@ -25,8 +25,8 @@ namespace WebUIHomeTask.Framework.Contexts
         
         public void SelectPayGradeMenu()
         {
-            _admin.jobMenu.Click();
-            _admin.payGradeMenu.Click();
+            _admin.JobMenu.Click();
+            _admin.PayGradeMenu.Click();
            // _admin.addButton.Click();
         }
     }

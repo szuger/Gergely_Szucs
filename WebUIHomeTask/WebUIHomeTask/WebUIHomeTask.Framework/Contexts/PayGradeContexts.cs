@@ -23,11 +23,23 @@ namespace WebUIHomeTask.Framework.Contexts
             //  _driver = driver;
         }
 
-        public void addName(string name)
+        public void AddName(string name)
         {
-            _payGrades.addButton.Click();
-            _payGrades.nameTextField.SendKeys(name);
-            _payGrades.saveButton.Click();
+            _payGrades.AddButton.Click();
+            _payGrades.NameTextField.SendKeys(name);
+            _payGrades.SaveButton.Click();
         }
+        public  void AddCurrency(string minS, string maxS)
+        {
+          
+            _payGrades.AddCurenciesButton.Click();
+           // _payGrades.selectCurrency.Click();
+           // _payGrades.AED.Click();
+            _payGrades.MaxSalary.SendKeys(minS);
+            _payGrades.MinSalary.SendKeys(maxS);
+           // _payGrades.SaveButton2.Click();
+
+        }
+        
     }
 }
