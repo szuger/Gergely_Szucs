@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace WebUIHomeTask.Framework.Pages
 {
-    public class PayGrades
+    public class PayGradesPage
     {
         private readonly IWebDriver _driver;
-        public PayGrades(IWebDriver driver)
+        public PayGradesPage(IWebDriver driver)
         {
             _driver = driver;
         }

@@ -19,17 +19,17 @@ namespace WebUIHomeTask.Steps
             _driver = context.Get<IWebDriver>("Driver");
             _loginContext = new LoginContexts(_driver);
             _dashBoardContext = new DashboardContext(_driver);
-        } 
+        }
 
-        [When(@"I log in as Admin user")]
-        public void WhenILogInAsAdminUser()
+        [Given(@"I log in as Admin user")]
+        public void GivenILogInAsAdminUser()
         {
             _loginContext.Login(UserName, Password);
         }
 
 
-        [Then(@"I go to Admin page")]
-        public void ThenIAmLoggedIn()
+        [Given(@"I go to Admin page")]
+        public void GivenIGoToAdminPage()
         {
             //var actual = _dashBoardContext.isPageLoaded();
             _dashBoardContext.goToAdminMenu();

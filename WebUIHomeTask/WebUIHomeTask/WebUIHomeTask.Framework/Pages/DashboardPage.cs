@@ -3,10 +3,10 @@
 
 namespace WebUIHomeTask.Framework.Pages
 {
-    public class Dashboard
+    public class DashboardPage
     {
         private readonly IWebDriver _driver;
-        public Dashboard(IWebDriver driver)
+        public DashboardPage(IWebDriver driver)
         {
             _driver = driver;
         }

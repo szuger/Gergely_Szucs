@@ -16,9 +16,7 @@ namespace WebUIHomeTask.Steps
         [Given(@"I navigate to the website")]
         public void GivenINavigateToTheWebsite()
         {
-            _driver.Navigate().GoToUrl("https://opensource-demo.orangehrmlive.com/");
-
-            //vieó 1:46:48
+            _driver.Navigate().GoToUrl("https://opensource-demo.orangehrmlive.com/");     
         }
 
     }

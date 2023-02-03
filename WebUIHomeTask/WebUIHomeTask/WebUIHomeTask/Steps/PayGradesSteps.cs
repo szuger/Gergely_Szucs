@@ -21,15 +21,15 @@ namespace WebUIHomeTask.Steps
             
         }
 
-        [Then(@"I add new pay grade")]
-        public void ThenIAddNewPayGradeWith()
+        [When(@"I add new pay grade")]
+        public void WhenIAddNewPayGrade()
         {
             _payGradesContexts.AddName(PayGradeName);
         }
-        [Then(@"I set minimum salary, maximum salary")]
-        public void ThenISetMinimumSalaryMaximumSalary()
+        [When(@"I set (.*) minimum salary, (.*) maximum salary")]
+        public void WhenISetMinimumSalaryMaximumSalary(string minS, string maxS)
         {
-            _payGradesContexts.AddCurrency(MaximumSalary, MinimumSalary);
+            _payGradesContexts.AddCurrency(maxS, minS);
         }
 
 

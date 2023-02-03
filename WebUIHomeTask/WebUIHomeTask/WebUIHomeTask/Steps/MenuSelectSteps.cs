@@ -17,9 +17,8 @@ namespace WebUIHomeTask.Steps
             _adminContext = new AdminContext(_driver);
             
         }
-
-        [Then(@"I select Job/Pay Grade in n the horizontal menu")]
-        public void ThenISelectJobPayGradeInNTheHorizontalMenu()
+        [When(@"I select Job/Pay Grade in n the horizontal menu")]
+        public void WhenISelectJobPayGradeInNTheHorizontalMenu()
         {
             _adminContext.SelectPayGradeMenu();
         }
